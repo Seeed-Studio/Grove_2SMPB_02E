@@ -1,7 +1,7 @@
 Grove High Accuracy Barometer Sensor(2SMPB-02E)
 =================================  
 
-![2SMPB-02E](https://github.com/linux-downey/Grove_touch_sensor_MPR121/blob/master/MPR121_module.png)  
+![2SMPB-02E](https://github.com/Jenkinlu001/Seeed_Picture/blob/master/2SMPB_02E.jpg)  
 
 
 Introduction of sensor
