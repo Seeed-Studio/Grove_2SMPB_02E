@@ -1,0 +1,27 @@
+  
+#######################################
+# Syntax Coloring Map For Grove_2SMPB_02E
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+TM1637	KEYWORD2
+init	KEYWORD2
+read_uncom_tempValue	KEYWORD2
+read_uncom_pressValue	KEYWORD2
+get_tempValue	KEYWORD2
+get_pressValue	KEYWORD2
+download_otp_value	KEYWORD2
+set_average_power	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
