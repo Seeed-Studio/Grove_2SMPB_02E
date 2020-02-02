@@ -84,14 +84,14 @@ typedef long unsigned int u32;
 #define bp3_A        1.3E-16
 #define bp3_S        7.9E-17
 
-/*Averaging times setting for Temperature/Pressure measurement
-  Temp/Press_ave=1, 22bits output
-  Temp/Press_ave=2, 22bits output
-  Temp/Press_ave=4~64, 24bits output
+/*  Averaging times setting for Temperature/Pressure measurement
+    Temp/Press_ave=1, 22bits output
+    Temp/Press_ave=2, 22bits output
+    Temp/Press_ave=4~64, 24bits output
   *************************************
-  notice!!!
-  This library USES 24-bit output. 
-  For more details, please see datasheet.
+    notice!!!
+    This library USES 24-bit output.
+    For more details, please see datasheet.
 */
 #define CTRL_MEAS_ADD       0xF4
 #define TEMP_AVERAGE_SKIP   0x00
@@ -123,41 +123,39 @@ typedef long unsigned int u32;
 #define PRESS_TXD2_ADD      0xF7
 
 
-class IIC_OPRTS
-{
-    public:
-    void iic_read_byte(u8 reg_addr,u8 *byte);
-    s32 iic_write_byte(u8 set_addr,u8 set_byte);
+class IIC_OPRTS {
+  public:
+    void iic_read_byte(u8 reg_addr, u8* byte);
+    s32 iic_write_byte(u8 set_addr, u8 set_byte);
     u8 _IIC_ADDR;
 };
 
-class SMPB:public IIC_OPRTS
-{
-    public:
-    SMPB(u8 ADDR=SMPB_ADDR);
-    ~SMPB(){};
+class SMPB: public IIC_OPRTS {
+  public:
+    SMPB(u8 ADDR = SMPB_ADDR);
+    ~SMPB() {};
     void init(s32 t_stanby);
     void set_t_stanby(u8 t_stanby);
     void set_IIR_filter(u8 set_byte);
     u8   read_measure_stat();
     u8   read_otp_stat();
     void reset_control();
-    s16  get_otp(u8 add0,u8 add1);
-    s32  get_a0_otp(u8 addex,u8 add0,u8 add1);
-    u32  get_b00_otp(u8 addex,u8 add0,u8 add1);
+    s16  get_otp(u8 add0, u8 add1);
+    s32  get_a0_otp(u8 addex, u8 add0, u8 add1);
+    u32  get_b00_otp(u8 addex, u8 add0, u8 add1);
     void download_otp_value();
-    void set_average_power(u8 temp_aver,u8 press_aver,u8 power_mode);
+    void set_average_power(u8 temp_aver, u8 press_aver, u8 power_mode);
     void read_uncom_tempValue();
     void read_uncom_pressValue();
     double  get_tempValue();
     double  get_pressValue();
-    double  a0,a1,a2;
-    double  bt1,bt2;
-    double  bp1,bp2,bp3;
-    double  b11,b12,b21,b00;
-    double  Dt,Dp;
-    double  Tr,Pr;
-    u8 d1,d2,d3;
+    double  a0, a1, a2;
+    double  bt1, bt2;
+    double  bp1, bp2, bp3;
+    double  b11, b12, b21, b00;
+    double  Dt, Dp;
+    double  Tr, Pr;
+    u8 d1, d2, d3;
     u32 d;
 };
 extern SMPB sensor;
