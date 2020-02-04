@@ -1,4 +1,4 @@
-Grove High Accuracy Barometer Sensor(2SMPB-02E)
+Grove High Accuracy Barometer Sensor(2SMPB-02E)  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_2SMPB_02E.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_2SMPB_02E)
 =================================  
 
 ![2SMPB-02E](https://github.com/Jenkinlu001/Seeed_Picture/blob/master/2SMPB_02E.jpg)  
